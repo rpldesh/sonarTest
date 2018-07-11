@@ -5,6 +5,7 @@ public class Dog {
     public String owner;
     public boolean run;
     public boolean eat;
+    public boolean walk;
     public Dog(String name, String owner){
         this.name=name;
         this.owner=owner;
@@ -23,6 +24,7 @@ public class Dog {
     public  void stop(){
         System.out.println(name+" stopped");
         this.run=false;
+        this.walk=false;
     }
 
     public void eat(){
@@ -37,5 +39,7 @@ public class Dog {
 
     public void walk(){
         System.out.println(name+" is walikng");
+        this.walk=true;
+
     }
 }
