@@ -40,6 +40,7 @@ public class Dog {
     public void walk(){
         System.out.println(name+" is walikng");
         this.walk=true;
+        System.out.println("Finish");
 
     }
 }
