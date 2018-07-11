@@ -1,0 +1,19 @@
+sudu: required
+laguage: java
+jdk: oraclejdk8
+dist: trusty
+addons:
+  sonarcloud:
+    organization: "rpldesh-github"
+    token:
+      secure: 7cddd0d05b92874f8edb8a0c9e94de0a50e122c2	  
+
+script:
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
+  - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then sonar-scanner -Dsonar.analysis.mode=preview -Dsonar.host.url=https://sonarcloud.io -Dsonar.github.oauth=$GH_TOKEN -Dsonar.github.repository=rpldesh/Calculator -Dsonar.github.pullRequest=$TRAVIS_PULL_REQUEST; fi
+
+  
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.sonar/cache'
