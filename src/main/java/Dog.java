@@ -34,4 +34,8 @@ public class Dog {
             this.eat=true;
         }
     }
+
+    public void walk(){
+        System.out.println(name+" is walikng");
+    }
 }
