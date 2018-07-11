@@ -1,0 +1,7 @@
+
+target/classes/Dog.class
+target/classes/Main.class
+target/test-classes/DogTest.class
+.idea/compiler.xml
+.idea/misc.xml
+.idea/workspace.xml
