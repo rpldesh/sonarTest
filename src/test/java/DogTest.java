@@ -5,21 +5,21 @@ public class DogTest {
     @org.junit.Test
     public void run() {
         Dog dog= new Dog("Terry","Jhon");
-        dog.run();
+        dog.dorun();
         assertEquals(true, dog.run);
     }
 
     @org.junit.Test
     public void stop() {
         Dog dog= new Dog("Terry","Jhon");
-        dog.stop();
+        dog.dostop();
         assertEquals(false, dog.run);
     }
 
     @org.junit.Test
     public void eat() {
         Dog dog= new Dog("Terry","Jhon");
-        dog.eat();
+        dog.doeat();
         assertEquals(true, dog.eat);
     }
 }

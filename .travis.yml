@@ -10,7 +10,7 @@ addons:
 
 script:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
-  - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then sonar-scanner -Dsonar.analysis.mode=preview -Dsonar.host.url=https://sonarcloud.io -Dsonar.github.oauth=$GH_TOKEN -Dsonar.github.repository=rpldesh/Calculator -Dsonar.github.pullRequest=$TRAVIS_PULL_REQUEST; fi
+  - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then sonar-scanner -Dsonar.analysis.mode=preview -Dsonar.host.url=https://sonarcloud.io -Dsonar.github.oauth=$GH_TOKEN -Dsonar.github.repository=rpldesh/sonarTest -Dsonar.github.pullRequest=$TRAVIS_PULL_REQUEST; fi
 
   
 cache:
