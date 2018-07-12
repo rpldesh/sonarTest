@@ -19,6 +19,7 @@ public class Dog {
     public void dorun(){
         System.out.println(name+" is runing");
         this.run=true;
+        this.walk=false;
     }
 
     public  void dostop(){
@@ -38,8 +39,14 @@ public class Dog {
     }
 
     public void dowalk(){
-        System.out.println(name+" is walikng");
-        this.walk=true;
+        if(this.eat==true){
+            System.out.println(name+" can't eat because it is eating");
+        }
+        else{
+            System.out.println(name+" is walikng");
+            this.walk=true;
+            this.run=false;
+        }
 
     }
 }
