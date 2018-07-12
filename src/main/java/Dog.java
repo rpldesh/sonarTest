@@ -16,18 +16,18 @@ public class Dog {
         System.out.println("It's Owner is "+name);
     }
 
-    public void run(){
+    public void dorun(){
         System.out.println(name+" is runing");
         this.run=true;
     }
 
-    public  void stop(){
+    public  void dostop(){
         System.out.println(name+" stopped");
         this.run=false;
         this.walk=false;
     }
 
-    public void eat(){
+    public void doeat(){
         if(this.run==true){
             System.out.println(name+" can't eat because it is running");
         }
@@ -37,10 +37,9 @@ public class Dog {
         }
     }
 
-    public void walk(){
+    public void dowalk(){
         System.out.println(name+" is walikng");
         this.walk=true;
-        System.out.println("Finish");
 
     }
 }
