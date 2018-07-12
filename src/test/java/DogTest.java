@@ -19,7 +19,7 @@ public class DogTest {
     @org.junit.Test
     public void eat() {
         Dog dog= new Dog("Terry","Jhon");
-        dog.doeat();
+        dog.eat();
         assertEquals(true, dog.eat);
     }
 }
